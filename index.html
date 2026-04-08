@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roger Liang | Bay Area Native</title>
+    <meta
+      name="description"
+      content="Roger Liang builds partnerships that turn emerging technology into real businesses."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top">Roger Liang</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://linkedin.com/in/rogerliang" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Bay Area Native</p>
+            <h1>Relationships first. Partnerships over transactions.</h1>
+            <p class="lede">
+              I work at the intersection of product, engineering, and go-to-market,
+              helping ambitious teams launch AI-powered products, structure partnerships,
+              and build ecosystems from zero to one.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Get in touch</a>
+              <a
+                class="button button-secondary"
+                href="https://linkedin.com/in/rogerliang"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <figure class="hero-photo">
+            <img src="./assets/headshot.jpeg" alt="Portrait of Roger Liang smiling." />
+          </figure>
+        </section>
+
+        <section class="section section-story" id="about">
+          <div class="section-heading">
+            <p class="section-label">About</p>
+            <h2>California roots, partnership instinct, and a bias toward building.</h2>
+          </div>
+          <div class="story-grid">
+            <p>
+              I’m a California native, raised in a family of first-generation immigrants,
+              and I’ve spent most of my life here through college, grad school, and now
+              building my career. I took a few detours to New York and Chicago along the
+              way, but California has always pulled me back.
+            </p>
+            <p>
+              Professionally, I build partnerships that turn emerging technology into real
+              businesses. I’ve worked with teams at Zendesk, Together AI, and Encord to
+              launch AI-powered products, structure marketplace deals, and grow ecosystems
+              from scratch.
+            </p>
+            <p>
+              I’m especially drawn to helping others navigate the ambiguity of partnerships,
+              whether that means advising founders or sharing what I’ve learned about
+              turning strategy into execution. I’m also deeply interested in how technology
+              can expand human capability.
+            </p>
+            <p>
+              Outside of work, I’m usually chasing winters, traveling the world with my
+              wife to ski and snowboard, or spending time with my growing family.
+            </p>
+          </div>
+        </section>
+
+        <section class="section section-values">
+          <div class="section-heading">
+            <p class="section-label">What I Care About</p>
+            <h2>Thoughtful partnerships, practical execution, and technology in service of people.</h2>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <h3>Ambiguity to execution</h3>
+              <p>Turning broad partnership ideas into decisions, systems, and momentum.</p>
+            </div>
+            <div class="value-card">
+              <h3>Founder support</h3>
+              <p>Helping early teams think through distribution, ecosystems, and the right first moves.</p>
+            </div>
+            <div class="value-card">
+              <h3>Human capability</h3>
+              <p>Exploring how emerging technology can make people sharper, faster, and more effective.</p>
+            </div>
+            <div class="value-card">
+              <h3>Life outside work</h3>
+              <p>Skiing, snowboarding, travel, and making time for the people who matter most.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-contact" id="contact">
+          <div class="section-heading">
+            <p class="section-label">Contact</p>
+            <h2>Have something interesting in mind?</h2>
+            <p class="contact-intro">
+              I’m always happy to connect on partnerships, AI, and ideas worth building.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <p class="form-status" id="form-status" hidden>
+              Thanks for reaching out. Your message is on its way.
+            </p>
+            <form
+              action="https://formsubmit.co/roger@rogerliang.com"
+              method="POST"
+              class="contact-form"
+            >
+              <input type="hidden" name="_subject" value="New message from rogerliang.com" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://rogerliang.com/?message=sent" />
+
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+              </label>
+
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+
+              <label>
+                Message
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="What would you like to connect about?"
+                  required
+                ></textarea>
+              </label>
+
+              <button class="button button-primary button-full" type="submit">
+                Send message
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Based in California. Best reached through the contact form or LinkedIn.</p>
+      </footer>
+    </div>
+
+    <script>
+      const status = document.getElementById("form-status");
+      const params = new URLSearchParams(window.location.search);
+
+      if (params.get("message") === "sent" && status) {
+        status.hidden = false;
+      }
+    </script>
+  </body>
+</html>
